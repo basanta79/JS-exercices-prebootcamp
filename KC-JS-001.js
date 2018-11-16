@@ -13,22 +13,12 @@ function calcularArea(){
 function calcularTodo(){
     var numero1 = parseInt(document.getElementById("numero1").value);
     var numero2 = parseInt(document.getElementById("numero2").value);
-    var suma = numero1+numero2;
-    var resta = numero1-numero2;
-    var multiplicacion = numero1*numero2;
-    console.log(multiplicacion);
-    var division = numero1/numero2;
-    console.log(division);
-    var exponencial = numero1**numero2;
-    console.log(exponencial);
-    var resto = numero1%numero2;
-    console.log(resto);
     
-    document.getElementById("suma").value= suma;
-    document.getElementById("resta").value= resta;
-    document.getElementById("multiplicacion").value= multiplicacion;
-    document.getElementById("division").value= division;
-    document.getElementById("exponencial").value= exponencial;
-    document.getElementById("resto").value= resto;
+    document.getElementById("suma").value= numero1+numero2;
+    document.getElementById("resta").value= numero1-numero2;
+    document.getElementById("multiplicacion").value= numero1*numero2;
+    document.getElementById("division").value= numero1/numero2;
+    document.getElementById("exponencial").value= numero1**numero2;
+    document.getElementById("resto").value= numero1%numero2;
 
 }
