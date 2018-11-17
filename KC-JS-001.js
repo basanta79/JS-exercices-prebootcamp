@@ -2,7 +2,9 @@ function isNotPositiveNumber(value){
     return ((isNaN(value)) || (value<=0))
 }
 
-
+function round2decimals(value){
+    return Math.round(value*100)/100;
+}
 
 function calcularArea(){
     var radioCirculo = parseFloat(document.getElementById("radio").value);
@@ -10,7 +12,7 @@ function calcularArea(){
     if (isNotPositiveNumber(radioCirculo)){
         areaCirculo = 'El radio ha de ser un valor numerico y mayor que 0';
     }else{
-        var areaCirculo = (Math.round((Math.PI*(radioCirculo**2))*100))/100;
+        var areaCirculo = round2decimals(Math.PI*(radioCirculo**2));
     }
     document.getElementById("resultado").value= areaCirculo;
 
@@ -52,5 +54,15 @@ function eurosAdollar() {
         xhttp.open("GET","https://free.currencyconverterapi.com/api/v6/convert?q=EUR_USD",true);
         xhttp.send("");
     }
+}
+
+function media3notas() {
+        let nota1 = parseFloat(document.getElementById("nota1").value);
+        let nota2 = parseFloat(document.getElementById("nota2").value);
+        let nota3 = parseFloat(document.getElementById("nota3").value);
+        if (isNaN(nota1)) nota1=0;
+        if (isNaN(nota2)) nota2=0;
+        if (isNaN(nota3)) nota3=0;
+        document.getElementById("notaMedia").value= round2decimals((nota1 + nota2 + nota3)/3);
     
 }

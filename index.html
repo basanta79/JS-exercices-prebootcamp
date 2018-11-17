@@ -24,11 +24,20 @@
         Resto: <input type="text" readonly id="resto"/>
 
         <h3>KC_EJ03</h3>
-        <p>Convertir de Euros a Dollar</p>
+        <p>Convertir de Euros a Dollar usando api de free.currencyconverterapi.com, en caso de no estar disponible, utilizando el valor por defecto 1,14</p>
         EUR: <input type="number" id="euros"/>
         <input type="button" value="calcular" onclick="eurosAdollar()"/>
         USD: <input type="text" readonly id="dollars"/>
         <label id="currency_conversion_powered"></label>
+
+        <h3>KC_EJ04</h3>
+        <p>Obtener la media de 3 notas. redondeada a 2 decimales</p>
+        Nota 1: <input type="number" id="nota1"/>
+        Nota 2: <input type="number" id="nota2"/>
+        Nota 3: <input type="number" id="nota3"/>
+        <input type="button" value="calcular" onclick="media3notas()"/>
+        Media: <input type="text" readonly id="notaMedia"/>
+        <label id="KC_EJ04_label"></label>
         
 
     </body>
