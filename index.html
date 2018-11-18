@@ -38,9 +38,29 @@
         <input type="button" value="calcular" onclick="media3notas()"/>
         Media: <input type="text" readonly id="notaMedia"/>
         <label id="KC_EJ04_label"></label>
+
+        <h3>KC_EJ05</h3>
+        <p>comparar dos fechas que contienen mes y año</p>
+        Fecha 1: <input type="month" id="fecha1"/>
+        Fecha 2: <input type="month" id="fecha2"/>
+        <input type="button" value="calcular" onclick="compara2Fechas()"/>
+        ¿Son iguales?: <input type="text" readonly id="resultadoFechas"/>
+        <label id="KC_EJ05_label"></label>
+
+        <h3>KC_EJ06</h3>
+        <p>Mostrar operaciones relacinales de dos números</p>
+        Número 1: <input type="number" id="KC_EJ06_numero1"/>
+        Número 2: <input type="number" id="KC_EJ06_numero2"/>
+        <input type="button" value="calcular" onclick="relacionar2numeros()"/> <br>
+        <label id="KC_EJ06_menorQue"></label>   <input type="text" readonly id="menorQue"/>
+        <label id="KC_EJ06_mayorQue"></label>   <input type="text" readonly id="mayorQue"/>
+        <label id="KC_EJ06_iguales"></label>    <input type="text" readonly id="iguales"/>
+        <label id="KC_EJ06_diferentes"></label> <input type="text" readonly id="diferentes"/>
+        <label id="KC_EJ06_label"></label>
+        
         
 
     </body>
     <link rel="stylesheet" type="text/css" href="./style.css">
-    <script src="./KC-JS-001.js"></script>
+    <script src="./KC-JS-Parte1.js"></script>
 </html>

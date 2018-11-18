@@ -15,7 +15,14 @@ function calcularArea(){
         var areaCirculo = round2decimals(Math.PI*(radioCirculo**2));
     }
     document.getElementById("resultado").value= areaCirculo;
+}
 
+function calcularMedia(array){
+    let sumaTotal=0;
+    array.forEach((item) => {
+        sumaTotal += item;
+    });
+    return sumaTotal /= array.length; 
 }
 
 function calcularTodo(){
@@ -60,9 +67,28 @@ function media3notas() {
         let nota1 = parseFloat(document.getElementById("nota1").value);
         let nota2 = parseFloat(document.getElementById("nota2").value);
         let nota3 = parseFloat(document.getElementById("nota3").value);
-        if (isNaN(nota1)) nota1=0;
-        if (isNaN(nota2)) nota2=0;
-        if (isNaN(nota3)) nota3=0;
-        document.getElementById("notaMedia").value= round2decimals((nota1 + nota2 + nota3)/3);
-    
+        let arrayNotas = [nota1, nota2, nota3];
+        document.getElementById("notaMedia").value= round2decimals(calcularMedia(arrayNotas));
+}
+
+function compara2Fechas(){
+    let fecha1 = document.getElementById("fecha1").value;
+    let fecha2 = document.getElementById("fecha2").value;
+    //console.log(typeof(fecha1) + " , " + fecha1 + " , " + fecha2);
+    return document.getElementById("resultadoFechas").value = fecha1 === fecha2;
+
+}
+
+function relacionar2numeros(){
+    let number1 = parseFloat(document.getElementById("KC_EJ06_numero1").value);
+    let number2 = parseFloat(document.getElementById("KC_EJ06_numero2").value);
+    document.getElementById("KC_EJ06_menorQue").innerHTML = number1 + " < " + number2 + " :"
+    document.getElementById("KC_EJ06_mayorQue").innerHTML = number1 + " > " + number2 + " :"
+    document.getElementById("KC_EJ06_iguales").innerHTML = number1 + " y " + number2 + " son iguales:"
+    document.getElementById("KC_EJ06_diferentes").innerHTML = number1 + " y " + number2 + " son diferentes:"
+    document.getElementById("menorQue").value = number1<number2;
+    document.getElementById("mayorQue").value = number1>number2;
+    document.getElementById("iguales").value = number1===number2;
+    document.getElementById("diferentes").value = number1!==number2;
+
 }
