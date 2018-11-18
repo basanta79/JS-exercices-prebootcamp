@@ -6,6 +6,7 @@ function round2decimals(value){
     return Math.round(value*100)/100;
 }
 
+
 function calcularArea(){
     var radioCirculo = parseFloat(document.getElementById("radio").value);
     //console.log(radioCirculo);
@@ -51,8 +52,8 @@ function eurosAdollar() {
                 console.log(this.responseText);
                 let arrResponse = JSON.parse(this.responseText);
                 //document.getElementById("dollars").value= arr.response[results];
-                console.log(arrResponse);
-                console.log(arrResponse.results.EUR_USD.val);
+                //console.log(arrResponse);
+                //console.log(arrResponse.results.EUR_USD.val);
                 factorConversion=arrResponse.results.EUR_USD.val;
             }
             document.getElementById("dollars").value= euros * factorConversion;

@@ -58,9 +58,34 @@
         <label id="KC_EJ06_diferentes"></label> <input type="text" readonly id="diferentes"/>
         <label id="KC_EJ06_label"></label>
         
-        
+        <h3>KC_EJ07</h3>
+        <p>Obtiene un valor de apto o no apto sobre la media de 3 notas. nota corte=5</p>
+        Nota 1: <input type="number" id="KC_07_nota1"/>
+        Nota 2: <input type="number" id="KC_07_nota2"/>
+        Nota 3: <input type="number" id="KC_07_nota3"/>
+        <input type="button" value="calcular" onclick="media3notas_aptitud()"/>
+        Media: <input type="text" readonly id="KC_07_notaMedia"/>
+        <label id="KC_EJ07_label"></label>
+
+        <h3>KC_EJ08</h3>
+        <p>De un número se muestra si es par o impar y si es positivo o negativo. Dice cero cuando es cero.</p>
+        Número a evaluar: <input type="number" id="KC_08_number"/>
+        <input type="button" value="calcular" onclick="NumberEvaluation(document.getElementById('KC_08_number').value)"/>
+        Resultado: <input type="text" readonly id="KC_08_resultado"/>
+        <label id="KC_EJ08_label"></label>
+
+        <h3>KC_EJ09</h3>
+        <p>Convertir un importe a USD o a EUR.</p>
+        Importe: <input type="number" id="KC_09_import"/>
+        <input type="radio" id="Eur2Usd" name="conversionDirection" checked> <label for="Eur2Usd">Euros to dollars</label>
+        <input type="radio" id="Usd2Eur" name="conversionDirection"> <label for="Eur2Usd">Dollars to euros</label>
+        <input type="button" value="calcular" onclick="conversionUsdEurUsd()"/>
+        Resultado: <input type="text" readonly id="KC_09_result"/>
+        <label id="currency_conversion_powered"></label>
+        <label id="KC_EJ09_label"></label>
 
     </body>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="./KC-JS-Parte1.js"></script>
+    <script src="./KC-JS-Parte2.js"></script>
 </html>
