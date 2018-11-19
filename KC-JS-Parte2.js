@@ -83,3 +83,60 @@ function conversionUsdEurUsdCallback(factorConversion){
     document.getElementById("KC_EJ09_label").innerHTML = "powered by free.currencyconverterapi.com";
     return document.getElementById("KC_09_result").value = round2decimals(amount * factorConversion);
 }
+
+function nameThroughChapter(){
+    let nombres = {
+        1: 'La amenaza fantasma',
+        2: 'El ataque de los clones',
+        3: 'La venganza de los Sith',
+        4: 'Una nueva esperanza',
+        5: 'El imperio contraataca',
+        6: 'El retorno del Jedi',
+        7: 'El despertar dela fuerza',
+        8: 'El último Jedi'
+    }
+    let chapter = document.getElementById("KC_10_chapter").value;
+    if ((parseInt(chapter)<1) | (parseInt(chapter)>8) | (chapter === '')){
+        return document.getElementById("KC_EJ10_label").innerHTML = "El valor debe estar entre 1 y 8";
+    }else{
+        return document.getElementById("KC_EJ10_label").innerHTML = nombres[chapter];
+    }
+}
+
+function findLargestAndSmaller(){
+    let number1 = parseFloat(document.getElementById("KC_11_number1").value);
+    let number2 = parseFloat(document.getElementById("KC_11_number2").value);
+    let number3 = parseFloat(document.getElementById("KC_11_number3").value);
+    document.getElementById("KC_11_Largest").value = Math.max(number1,number2,number3);
+    document.getElementById("KC_11_Smaller").value = Math.min(number1,number2,number3);
+}
+
+function consonantOrVocal(){
+    let vocals=['a','e','i','o','u'];
+    let character = document.getElementById("KC_12_character").value;
+    let vocal=false;
+    if (!isNaN(character)){
+        return document.getElementById("KC_EJ12_label").innerHTML = "El caracter ha de ser letra";
+    }
+    for(let i=0; i<vocals.length; i++){
+        vocal= (vocals[i]==character);
+        if (vocal){
+            return document.getElementById("KC_12_KindaChar").value ="Es una vocal";
+        }
+    }
+    return document.getElementById("KC_12_KindaChar").value ="Es una consonante";
+    /*
+    vocals.forEach((item)=> {
+        console.log(typeof(item));
+        console.log(typeof(character));
+        console.log(item===character);
+        console.log(vocal);
+        if (!vocal){
+            console.log(vocal);
+            vocal= (item==character);
+        }
+        console.log(vocal);
+    })
+    console.log(vocal);
+    return document.getElementById("KC_12_KindaChar").value ="Es una consonante";*/
+}

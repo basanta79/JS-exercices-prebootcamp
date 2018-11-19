@@ -81,8 +81,31 @@
         <input type="radio" id="Usd2Eur" name="conversionDirection"> <label for="Eur2Usd">Dollars to euros</label>
         <input type="button" value="calcular" onclick="conversionUsdEurUsd()"/>
         Resultado: <input type="text" readonly id="KC_09_result"/>
-        <label id="currency_conversion_powered"></label>
         <label id="KC_EJ09_label"></label>
+
+        <h3>KC_EJ10</h3>
+        <p>Devolver el nombre de la pelicula de starwars según la parte que se introduzca</p>
+        Parte: <input type="number" id="KC_10_chapter"/>
+        <input type="button" value="Obtener" onclick="nameThroughChapter()"/>
+        Resultado: <input type="text" readonly id="KC_09_result"/>
+        <label id="KC_EJ10_label"></label>
+
+        <h3>KC_EJ11</h3>
+        <p>De 3 numeros se devuelve el mayor y el menor</p>
+        Número 1: <input type="number" id="KC_11_number1"/>
+        Número 2: <input type="number" id="KC_11_number2"/>
+        Número 3: <input type="number" id="KC_11_number3"/>
+        <input type="button" value="calcular" onclick="findLargestAndSmaller()"/>
+        Mayor: <input type="text" readonly id="KC_11_Largest"/>
+        Menor: <input type="text" readonly id="KC_11_Smaller"/>
+        <label id="KC_EJ11_label"></label>
+
+        <h3>KC_EJ12</h3>
+        <p>De 1 letra indicar si es consonante o vocal</p>
+        Letra: <input type="text" id="KC_12_character"/>
+        <input type="button" value="calcular" onclick="consonantOrVocal()"/>
+        Tipo: <input type="text" readonly id="KC_12_KindaChar"/>
+        <label id="KC_EJ12_label"></label>
 
     </body>
     <link rel="stylesheet" type="text/css" href="./style.css">
