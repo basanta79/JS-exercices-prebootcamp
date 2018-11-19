@@ -112,7 +112,7 @@ function findLargestAndSmaller(){
 }
 
 function consonantOrVocal(){
-    let vocals=['a','e','i','o','u'];
+    let vocals=['a','e','i','o','u', 'A', 'E', 'I', 'O', 'U'];
     let character = document.getElementById("KC_12_character").value;
     let vocal=false;
     if (!isNaN(character)){
@@ -125,18 +125,4 @@ function consonantOrVocal(){
         }
     }
     return document.getElementById("KC_12_KindaChar").value ="Es una consonante";
-    /*
-    vocals.forEach((item)=> {
-        console.log(typeof(item));
-        console.log(typeof(character));
-        console.log(item===character);
-        console.log(vocal);
-        if (!vocal){
-            console.log(vocal);
-            vocal= (item==character);
-        }
-        console.log(vocal);
-    })
-    console.log(vocal);
-    return document.getElementById("KC_12_KindaChar").value ="Es una consonante";*/
 }

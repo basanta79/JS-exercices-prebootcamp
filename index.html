@@ -102,13 +102,54 @@
 
         <h3>KC_EJ12</h3>
         <p>De 1 letra indicar si es consonante o vocal</p>
-        Letra: <input type="text" id="KC_12_character"/>
+        Letra: <input type="text" id="KC_12_character" maxlength="1"/>
         <input type="button" value="calcular" onclick="consonantOrVocal()"/>
         Tipo: <input type="text" readonly id="KC_12_KindaChar"/>
         <label id="KC_EJ12_label"></label>
+		
+		<h3>KC_EJ13</h3>
+        <p>Solicitar un rango y devolver los valores de ese rango de un array</p>
+        Inicio: <input type="number" id="KC_13_start"/>
+		Fin: <input type="number" id="KC_13_end"/>
+        <input type="button" value="calcular" onclick="getSlice()"/>
+        Resultado: <input type="text" readonly id="KC_13_Result"/>
+        <label id="KC_EJ13_label"></label>
+		
+		<h3>KC_EJ14</h3>
+        <p>Devolver la longitud de una cadena</p>
+        Texto: <input type="text" id="KC_14_string"/>
+        <input type="button" value="calcular" onclick="getLength()"/>
+        Longitud: <input type="text" readonly id="KC_14_Result"/>
+        <label id="KC_EJ14_label"></label>
+		
+		<h3>KC_EJ15</h3>
+        <p>Almacenar en una tupla las cualificaciones de 3 personas y su nombre</p>
+        Nombre 1: <input type="text" id="KC_15_name1"/>
+		Nota 1  : <input type="number" id="KC_15_qualif1"/> <br>
+		Nombre 2: <input type="text" id="KC_15_name2"/>
+		Nota 2  : <input type="number" id="KC_15_qualif2"/> <br>
+		Nombre 3: <input type="text" id="KC_15_name3"/>
+		Nota 3  : <input type="number" id="KC_15_qualif3"/>
+        <input type="button" value="guardar" onclick="setQualificationsAndNames()"/>
+        <label id="KC_EJ15_label"></label>
+		
+		<h3>KC_EJ16</h3>
+        <p>Introducir un indice y obtener el nombre de ese indice</p>
+        Indice: <input type="text" id="KC_16_index"/>
+        <input type="button" value="obtener" onclick="getNameWithIndex()"/>
+        Nombre: <input type="text" readonly id="KC_16_Name"/>
+        <label id="KC_EJ16_label"></label>
+		
+		<h3>KC_EJ17</h3>
+        <p>Introducir un nombre y devolvera el correo electronico asociado</p>
+        Nombre: <input type="text" id="KC_17_name"/>
+        <input type="button" value="obtener" onclick="getMailWithName()"/>
+        Mail: <input type="text" readonly id="KC_17_Mail"/>
+        <label id="KC_EJ17_label"></label>
 
     </body>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="./KC-JS-Parte1.js"></script>
     <script src="./KC-JS-Parte2.js"></script>
+	<script src="./KC-JS-Parte3.js"></script>
 </html>
