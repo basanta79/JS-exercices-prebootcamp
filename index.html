@@ -167,6 +167,30 @@
         <input type="button" value="calcular" onclick="addNaturalNumbers()"/>
         Salida: <input type="text" readonly id="KC_20_Suma"/>
         <label id="KC_EJ20_label"></label>
+		
+		<h3>KC_EJ21</h3>
+        <p>Introducir 1 número y se muestra tabla de multiplicar.</p>
+        Tabla: <input type="number" size="90" id="KC_21_tabla" />
+        <input type="button" value="calcular" onclick="prodTable()"/>
+        Tabla de multiplicar: 
+        <label id="KC_EJ21_label"></label>
+		
+		<h3>KC_EJ22</h3>
+        <p>Introducir nombre y edad de personas, cuando se introduzcan 10 se podrá obtener quienes pueden votar (+18).</p>
+        Nombre: <input type="text" size="20" id="KC_22_name" />
+		Edad: <input type="number" id="KC_22_age" />
+        <input type="button" value="Guardar" onclick="storePeople()"/>
+		<input type="button" value="Calcular" onclick="findAdults()"/>
+        Pueden votar: 
+        <label id="KC_EJ22_label"></label>
+		
+		<h3>KC_EJ23</h3>
+        <p>calcular notas medias. Alumno y notas separado por un espcio, las notas separadas por comas. Ej: nombre n,n,n</p>
+        Nombre y notas: <input type="text" size="20" id="KC_23_input" />
+        <input type="button" value="Guardar" onclick="storeScores()"/>
+		<input type="button" value="Calcular" onclick="findMeans()"/>
+        Notas Medias: 
+        <label id="KC_EJ23_label"></label>
 
     </body>
     <link rel="stylesheet" type="text/css" href="./style.css">
