@@ -108,3 +108,61 @@ function storeScores(){
 		console.log(scores);
 	}
 }
+
+function storeScores2(){
+	let data = document.getElementById("KC_24_input").value;
+	let result = "";
+    let mean = 0;
+    let arrResult = new Array;
+	if (data==="terminar"){
+		scores.forEach( item => {
+			mean=0;
+			item['scores'].forEach(item_ => {
+				mean = mean + parseInt(item_);
+            });
+            mean = mean / item['scores'].length;
+            arrResult.push({'name': item['name'] , 'mean': mean});
+			//result = result + "<br>" +item['name'] + ":" + mean;
+        });
+        let arrSorted = arrResult.sort(function(a,b){
+            return a['mean']-b['mean'];
+        });
+        for (let i=arrSorted.length-1; i>=0; i--){
+            result = result + "<br>" + arrSorted[i]['name'] + ":" + arrSorted[i]['mean'];
+        }
+        console.log(arrSorted);
+		return document.getElementById("KC_EJ24_label").innerHTML = result;
+	}else{
+		let dataSplit = data.split(' ');
+		let scoreSplit= dataSplit[1].split(',');
+		scores.push({'name': dataSplit[0], 'scores':scoreSplit});
+		console.log(scores);
+	}
+}
+
+let target=0;
+let attempts =5;
+function calculateRandom(){
+    target = Math.floor(Math.random()*100);
+    attempts=5;
+    console.log(target);
+
+}
+
+function tryNumber(){
+    let number = parseInt(document.getElementById("KC_25_input").value);
+    if (number===target){
+        calculateRandom();
+        return document.getElementById("KC_EJ25_label").innerHTML = "¡Bien, has adivinado!";
+    }else if (attempts>1){
+        attempts--;
+        if (number > target){
+            return document.getElementById("KC_EJ25_label").innerHTML = `Intenta con un número menor, te quedan ${attempts} oportunidades`;
+        }else{
+            return document.getElementById("KC_EJ25_label").innerHTML = `Intenta con un número mayor, te quedan ${attempts} oportunidades`;
+        }
+    }else{
+        calculateRandom();
+        return document.getElementById("KC_EJ25_label").innerHTML = "¡Ohh, se han acabado las oprtunidades!";
+    }
+}

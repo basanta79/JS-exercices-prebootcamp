@@ -188,9 +188,29 @@
         <p>calcular notas medias. Alumno y notas separado por un espcio, las notas separadas por comas. Ej: nombre n,n,n</p>
         Nombre y notas: <input type="text" size="20" id="KC_23_input" />
         <input type="button" value="Guardar" onclick="storeScores()"/>
-		<input type="button" value="Calcular" onclick="findMeans()"/>
         Notas Medias: 
         <label id="KC_EJ23_label"></label>
+
+        <h3>KC_EJ24</h3>
+        <p>
+            calcular notas medias. Alumno y notas separado por un espcio, 
+            las notas separadas por comas. Ej: nombre n,n,n
+            El resultado sale ordenado de mayor a menor.
+        </p>
+        Nombre y notas: <input type="text" size="20" id="KC_24_input" />
+        <input type="button" value="Guardar" onclick="storeScores2()"/>
+        Notas Medias: 
+        <label id="KC_EJ24_label"></label>
+
+        <h3>KC_EJ25</h3>
+        <p>
+            Adivinar un número aleatorio de 0 a 100. Hay 5 oportunidades
+        </p>
+        <input type="button" value="Empezar" onclick="calculateRandom()"/>
+        Prueba: <input type="number" size="20" id="KC_25_input" />
+        <input type="button" value="Probar suerte" onclick="tryNumber()"/>
+        Resultado: 
+        <label id="KC_EJ25_label"></label>
 
     </body>
     <link rel="stylesheet" type="text/css" href="./style.css">
