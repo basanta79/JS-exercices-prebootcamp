@@ -14,11 +14,21 @@ function createRows(){
     }
 }
 
+function removeSpaces(){
+    
+}
+
 function es_palindromo(texto){
     let result = true;
-    texto.replace(/ /gi,'s');
+    let arrToCompare = new Array;
     console.log(texto);
     let arrText = texto.split('');
+    arrText.forEach(element => {
+        if (element!==' '){
+            arrToCompare.push(element);
+        }
+    });
+    console.log(arrToCompare);
     let arrTextReverse = texto.split('');
     arrTextReverse.reverse();
     console.log(arrText);
