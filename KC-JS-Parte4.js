@@ -109,6 +109,15 @@ function storeScores(){
 	}
 }
 
+function average(arr){
+    let result=0;
+    arr.forEach(element=>{
+        result += parseInt(element);
+    });
+    result = result/arr.length;
+    return result;
+}
+
 function storeScores2(){
 	let data = document.getElementById("KC_24_input").value;
 	let result = "";
@@ -117,10 +126,13 @@ function storeScores2(){
 	if (data==="terminar"){
 		scores.forEach( item => {
 			mean=0;
-			item['scores'].forEach(item_ => {
+            mean= average(item['scores']); // KC_EJ29
+			/********** KC_EJ24
+            item['scores'].forEach(item_ => {
 				mean = mean + parseInt(item_);
             });
             mean = mean / item['scores'].length;
+            ********************/
             arrResult.push({'name': item['name'] , 'mean': mean});
 			//result = result + "<br>" +item['name'] + ":" + mean;
         });

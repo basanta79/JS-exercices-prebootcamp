@@ -191,7 +191,7 @@
         Notas Medias: 
         <label id="KC_EJ23_label"></label>
 
-        <h3>KC_EJ24</h3>
+        <h3>KC_EJ24 y KC_EJ29</h3>
         <p>
             calcular notas medias. Alumno y notas separado por un espcio, 
             las notas separadas por comas. Ej: nombre n,n,n
@@ -230,6 +230,33 @@
         Resultado: 
         <label id="KC_EJ27_label"></label>
 
+        <h3>KC_EJ28</h3>
+        <p>
+            Dibuja un cuadrado en consola con tantos caracteres '+' como se indiquen.
+        </p>
+        Lado: <input type="number" size="20" id="KC_28_input" />
+        <input type="button" value="Dibujar" onclick="drawSquareInConsole()"/>
+        Resultado: 
+        <label id="KC_EJ28_label"></label>
+
+        <h3>KC_EJ30</h3>
+        <p>
+            Maquina expendedora.
+        </p>
+        <input type="radio" id="Beverage1" name="beverage" checked> <label for="Beverage1">Fanta</label>
+        <input type="radio" id="Beverage2" name="beverage" checked> <label for="Beverage2">Pepsi</label>
+        <input type="radio" id="Beverage3" name="beverage" checked> <label for="Beverage3">7UP</label>
+        <input type="button" value="Seleccionar bebida" onclick="selectBeverage()"/>
+        <br>
+        <input type="radio" id="Coin1" name="Coin" checked> <label for="Coin1">0.10</label>
+        <input type="radio" id="Coin2" name="Coin" checked> <label for="Coin2">0.20</label>
+        <input type="radio" id="Coin3" name="Coin" checked> <label for="Coin3">0.50</label>
+        <input type="radio" id="Coin3" name="Coin" checked> <label for="Coin3">1.00</label>
+        <input type="button" value="Introducir Moneda" onclick="insertCoin()"/>
+        Resultado: 
+        <label id="KC_EJ30_label"></label>
+
+
     </body>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="./KC-JS-Parte1.js"></script>
@@ -237,4 +264,5 @@
     <script src="./KC-JS-Parte3.js"></script>
     <script src="./KC-JS-Parte4.js"></script>
     <script src="./KC-JS-Parte5.js"></script>
+    <script src="./KC-JS-Parte6.js"></script>
 </html>
